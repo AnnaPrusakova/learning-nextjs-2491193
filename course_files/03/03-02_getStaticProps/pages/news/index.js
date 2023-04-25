@@ -1,16 +1,20 @@
 import Layout from "../../components/Layout"
-export default function News() {
+export default function News({result}) {
     return(
     <Layout>
       <h1>Top Stories</h1>
     </Layout>)
 }
 
-const API_KEY = "9hUvOqGGdnCBvGKg4EB3L7mGdBC8hKKJ"
+const API_KEY = "z0i28MG302H0LinAOuESJvafliZ1Lm09"
 export async function getStaticProps() {
-  // The value of the `props` key will be
-  //  passed to the `Home` component
+const URL = `https://api.nytimes.com/svc/topstories/v2/home.json?api-key=${API_KEY}`;
+const res = await fetch(URL);
+const data = await res.json();
+console.log(data.results);
   return {
-    props: {}
+    props: {
+        result: data.results
+    }
   }
 }
