@@ -14,7 +14,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Welcome to my Elearning site
         </h1>
 
         <p className={styles.description}>
@@ -37,23 +37,20 @@ export default function Home() {
             </a>
           </Link>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+          <Link href="/learn/vue">
+            <a className={styles.card}>
+              <h2>Learn Vue &rarr;</h2>
+              <p>Find in-depth information about Vue features and API.</p>
+            </a>
+          </Link>
 
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+          <Link href="/learn/angular">
+            <a className={styles.card}>
+              <h2>Learn Angular &rarr;</h2>
+              <p>Find in-depth information about Angular features and API.</p>
+            </a>
+          </Link>
+
         </div>
       </main>
 
